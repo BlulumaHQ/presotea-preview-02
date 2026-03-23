@@ -42,6 +42,10 @@
 
     --section-alt: 100 25% 97%;
     --hero-overlay: 150 73% 27%;
+    --funnel-dark: 150 30% 10%;
+    --funnel-warm: 40 60% 97%;
+    --funnel-accent: 48 90% 52%;
+    --funnel-urgency: 0 75% 55%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -196,6 +200,52 @@
 
   .gradient-hero {
     background: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(150, 73%, 22%) 100%);
+  }
+
+  .funnel-dark {
+    background-color: hsl(var(--funnel-dark));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .funnel-warm {
+    background-color: hsl(var(--funnel-warm));
+  }
+
+  .funnel-highlight {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--funnel-accent)));
+  }
+
+  .btn-funnel {
+    @apply inline-flex items-center justify-center px-10 py-5 font-bold text-lg rounded-full transition-all duration-300;
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    box-shadow: 0 6px 24px -4px hsl(var(--secondary) / 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .btn-funnel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px -4px hsl(var(--secondary) / 0.6);
+    filter: brightness(1.08);
+  }
+
+  .btn-funnel-outline {
+    @apply inline-flex items-center justify-center px-10 py-5 font-bold text-lg rounded-full transition-all duration-300 border-2;
+    border-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary-foreground));
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .btn-funnel-outline:hover {
+    background-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary));
+    transform: translateY(-3px);
   }
 
   .leaf-pattern {
