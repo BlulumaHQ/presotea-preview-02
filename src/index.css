@@ -202,6 +202,52 @@
     background: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(150, 73%, 22%) 100%);
   }
 
+  .funnel-dark {
+    background-color: hsl(var(--funnel-dark));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .funnel-warm {
+    background-color: hsl(var(--funnel-warm));
+  }
+
+  .funnel-highlight {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--funnel-accent)));
+  }
+
+  .btn-funnel {
+    @apply inline-flex items-center justify-center px-10 py-5 font-bold text-lg rounded-full transition-all duration-300;
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    box-shadow: 0 6px 24px -4px hsl(var(--secondary) / 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .btn-funnel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px -4px hsl(var(--secondary) / 0.6);
+    filter: brightness(1.08);
+  }
+
+  .btn-funnel-outline {
+    @apply inline-flex items-center justify-center px-10 py-5 font-bold text-lg rounded-full transition-all duration-300 border-2;
+    border-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary-foreground));
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .btn-funnel-outline:hover {
+    background-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary));
+    transform: translateY(-3px);
+  }
+
   .leaf-pattern {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-5 0-15 10-15 20s10 20 15 20 15-10 15-20S35 10 30 10z' fill='%23127b46' fill-opacity='0.03'/%3E%3C/svg%3E");
   }
